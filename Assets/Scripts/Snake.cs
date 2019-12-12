@@ -29,7 +29,12 @@ public class Snake : MonoBehaviour
 
     private void Update()
     {
+        HandleInput();
+        HandleGridMovement();
+    }
 
+    private void HandleInput()
+    {
         if (Input.touchCount == 1) // user is touching the screen with a single touch
         {
             Touch touch = Input.GetTouch(0); // get the touch
@@ -54,26 +59,42 @@ public class Snake : MonoBehaviour
                     {   //If the horizontal movement is greater than the vertical movement...
                         if ((lp.x > fp.x))  //If the movement was to the right)
                         {   //Right swipe
-                            gridMoveDirection.y = 0;
-                            gridMoveDirection.x = +1;
+                            if (gridMoveDirection.x != -1)
+                            {
+                                gridMoveDirection.y = 0;
+                                gridMoveDirection.x = +1;
+
+                                transform.localScale = new Vector3(2f, 2f, 0f);
+                            }
                         }
                         else
                         {   //Left swipe
-                            gridMoveDirection.y = 0;
-                            gridMoveDirection.x = -1;
+                            if (gridMoveDirection.x != 1)
+                            {
+                                gridMoveDirection.y = 0;
+                                gridMoveDirection.x = -1;
+
+                                transform.localScale = new Vector3(2f, -2f, 0f);
+                            }
                         }
                     }
                     else
                     {   //the vertical movement is greater than the horizontal movement
                         if (lp.y > fp.y)  //If the movement was up
                         {   //Up swipe
-                            gridMoveDirection.y = +1;
-                            gridMoveDirection.x = 0;
+                            if (gridMoveDirection.y != -1)
+                            {
+                                gridMoveDirection.y = +1;
+                                gridMoveDirection.x = 0;
+                            }
                         }
                         else
                         {   //Down swipe
-                            gridMoveDirection.y = -1;
-                            gridMoveDirection.x = 0;
+                            if (gridMoveDirection.y != 1)
+                            {
+                                gridMoveDirection.y = -1;
+                                gridMoveDirection.x = 0;
+                            }
                         }
                     }
                 }
@@ -83,14 +104,25 @@ public class Snake : MonoBehaviour
                 }
             }
         }
+    }
 
+    private void HandleGridMovement()
+    {
         gridMoveTimer += Time.deltaTime;
-        if(gridMoveTimer >= gridMoveTimerMax)
+        if (gridMoveTimer >= gridMoveTimerMax)
         {
             gridPosition += gridMoveDirection;
             gridMoveTimer -= gridMoveTimerMax;
-        }
 
-        transform.position = new Vector3(gridPosition.x, gridPosition.y);
+            transform.position = new Vector3(gridPosition.x, gridPosition.y);
+            transform.eulerAngles = new Vector3(0, 0, GetAngleFromVector(gridMoveDirection));
+        }
+    }
+
+    private float GetAngleFromVector(Vector2Int dir)
+    {
+        float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        if (n < 0) n += 360;
+        return n;
     }
 }

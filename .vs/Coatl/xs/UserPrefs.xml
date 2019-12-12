@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{ED20E1CC-C371-F15C-6450-B9C56B2C5742}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Snake.cs">
+    <Files>
+      <File FileName="Assets/Scripts/GameHandler.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/GameAssets.cs" Line="12" Column="25" />
+      <File FileName="Assets/Scripts/Snake.cs" Line="32" Column="14" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="dd35c0d3-2619-4646-a663-bb64c807cb08" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

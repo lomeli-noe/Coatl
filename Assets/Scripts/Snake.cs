@@ -76,6 +76,7 @@ public class Snake : MonoBehaviour
                     transform.position.y > 39 || transform.position.y < -39)
         {
             state = State.Dead;
+            GameHandler.SnakeDied();
         }
 
     }
@@ -196,8 +197,8 @@ public class Snake : MonoBehaviour
                 Vector2Int snakeBodyPartGridPosition = snakeBodyPart.GetGridPosition();
                 if(gridPosition == snakeBodyPartGridPosition)
                 {
-                    CMDebug.TextPopup("Dead!!! ", transform.position);
                     state = State.Dead;
+                    GameHandler.SnakeDied();
                 }
             }
 

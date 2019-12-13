@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
@@ -6,11 +7,29 @@ public static class Loader
 {
     public enum Scene
     {
-        GameScene
+        GameScene,
+        LoadingScene
     }
+
+    private static Action loaderCallbackAction;
 
     public static void Load(Scene scene)
     {
-        SceneManager.LoadScene(scene.ToString());
+        loaderCallbackAction = () =>
+        {
+            SceneManager.LoadScene(scene.ToString());
+        };
+
+        SceneManager.LoadScene(Scene.LoadingScene.ToString());
+        
+    }
+
+    public static void LoaderCallback()
+    {
+        if(loaderCallbackAction != null)
+        {
+            loaderCallbackAction();
+            loaderCallbackAction = null;
+        }
     }
 }

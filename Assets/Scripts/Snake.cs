@@ -71,7 +71,13 @@ public class Snake : MonoBehaviour
             case State.Dead:
                 break;
         }
-        
+
+        if (transform.position.x > 76 || transform.position.x < -76 ||
+                    transform.position.y > 39 || transform.position.y < -39)
+        {
+            state = State.Dead;
+        }
+
     }
 
     private void HandleInput()

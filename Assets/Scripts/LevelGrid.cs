@@ -27,7 +27,7 @@ public class LevelGrid
     {
         do
         {
-            foodGripPosition = new Vector2Int(Random.Range(0, width), Random.Range(0, height));
+            foodGripPosition = new Vector2Int(Random.Range(-74, 74), Random.Range(-37, 37));
         } while (snake.GetFullSnakeGridPositionList().IndexOf(foodGripPosition) != -1);
 
         foodGameObject = new GameObject("Food", typeof(SpriteRenderer));

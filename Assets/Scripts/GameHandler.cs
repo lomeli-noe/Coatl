@@ -4,13 +4,42 @@ using CodeMonkey.Utils;
 
 public class GameHandler : MonoBehaviour
 {
+    private static GameHandler instance;
+
+    private static int score;
     [SerializeField] private Snake snake;
     private LevelGrid levelGrid;
+
+    private void Awake()
+    {
+        instance = this;
+        InitializeStatic();
+    }
 
     private void Start()
     {
         levelGrid = new LevelGrid(40, 30);
         snake.Setup(levelGrid);
         levelGrid.SetUp(snake);
+
+        CMDebug.ButtonUI(Vector2.zero, "Reload Scene", () =>
+        {
+            Loader.Load(Loader.Scene.GameScene);
+        });
+    }
+
+    private static void InitializeStatic()
+    {
+        score = 0;
+    }
+
+    public static int GetScore()
+    {
+        return score;
+    }
+
+    public static void AddScore()
+    {
+        score += 100;
     }
 }

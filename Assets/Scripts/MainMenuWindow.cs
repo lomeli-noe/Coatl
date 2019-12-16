@@ -7,8 +7,8 @@ public class MainMenuWindow : MonoBehaviour
 {
     private void Awake()
     {
-        //transform.Find("PlayButton").GetComponent<Button_UI>().ClickFunc = () => Loader.Load(Loader.Scene.GameScene);
+        transform.Find("PlayButton").GetComponent<Button_UI>().ClickFunc = () => Loader.Load(Loader.Scene.GameScene);
 
-        //transform.Find("QuiButton").GetComponent<Button_UI>().ClickFunc = () => Application.Quit();
+        transform.Find("QuitButton").GetComponent<Button_UI>().ClickFunc = () => Application.Quit();
     }
 }

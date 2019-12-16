@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: c55654149c52c4b17b2b41464c079410
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: LifeForm BB
+  fontNames:
+  - LifeForm BB
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 840b62c7b2afd491eb9b417d79a821b5, type: 3}
+  - {fileID: 12800000, guid: 147b19bafcfca43a5851abfa894775f6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

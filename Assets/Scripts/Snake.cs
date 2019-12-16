@@ -42,8 +42,8 @@ public class Snake : MonoBehaviour
 
     private void Awake()
     {
-        gridPosition = new Vector2Int(5, 5);
-        gridMoveTimerMax = .1f;
+        gridPosition = new Vector2Int(0, 0);
+        gridMoveTimerMax = .2f;
         gridMoveTimer = gridMoveTimerMax;
         gridMoveDirection = Direction.Right;
 
@@ -72,8 +72,8 @@ public class Snake : MonoBehaviour
                 break;
         }
 
-        if (transform.position.x > 76 || transform.position.x < -76 ||
-                    transform.position.y > 39 || transform.position.y < -39)
+        if (transform.position.x > 33.6 || transform.position.x < -33.6 ||
+                    transform.position.y >= 15 || transform.position.y <= -15)
         {
             state = State.Dead;
             GameHandler.SnakeDied();
@@ -111,7 +111,7 @@ public class Snake : MonoBehaviour
                             {
                                 gridMoveDirection = Direction.Right;
 
-                                transform.localScale = new Vector3(1f, 1f, 0f);
+                                transform.localScale = new Vector3(0.009f, 0.009f, 0f);
                             }
                         }
                         else
@@ -120,7 +120,7 @@ public class Snake : MonoBehaviour
                             {
                                 gridMoveDirection = Direction.Left;
 
-                                transform.localScale = new Vector3(1f, -1f, 0f);
+                                transform.localScale = new Vector3(0.009f, -0.009f, 0f);
                             }
                         }
                     }
@@ -254,6 +254,7 @@ public class Snake : MonoBehaviour
             snakeBodyGameObject.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.snakeBodySprite;
             snakeBodyGameObject.GetComponent<SpriteRenderer>().sortingOrder = -bodyIndex;
             transform = snakeBodyGameObject.transform;
+            transform.localScale = new Vector3(0.03f, 0.03f, 0f);
         }
 
         public void SetSnakeMovePosition(SnakeMovePosition snakeMovePosition)

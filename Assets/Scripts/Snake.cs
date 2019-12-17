@@ -30,6 +30,11 @@ public class Snake : MonoBehaviour
     private List<SnakeMovePosition> snakeMovePositionList;
     private List<SnakeBodyPart> snakeBodyPartList;
 
+    bool hasPlayed = false;
+
+    GameObject soundGameObject;
+    AudioSource audioSource;
+
 
     public void Setup(LevelGrid levelGrid)
     {
@@ -58,6 +63,9 @@ public class Snake : MonoBehaviour
     {
         dragDistance = Screen.height * 15 / 100; //dragDistance is 15% height of the screen
 
+        soundGameObject = new GameObject("Sound");
+        audioSource = soundGameObject.AddComponent<AudioSource>();
+        audioSource.PlayOneShot(GameAssets.instance.Cumbia);
     }
 
     private void Update()
@@ -77,6 +85,11 @@ public class Snake : MonoBehaviour
         {
             state = State.Dead;
             GameHandler.SnakeDied();
+            if (hasPlayed == false)
+            {
+                hasPlayed = true;
+                SoundManager.PlaySound(SoundManager.Sound.SnakeDie);
+            }
         }
 
     }
@@ -141,6 +154,7 @@ public class Snake : MonoBehaviour
                             }
                         }
                     }
+                    SoundManager.PlaySound(SoundManager.Sound.SnakeMove);
                 }
                 else
                 {   //It's a tap as the drag distance is less than 20% of the screen height
@@ -156,6 +170,7 @@ public class Snake : MonoBehaviour
         if (gridMoveTimer >= gridMoveTimerMax)
         {
             gridMoveTimer -= gridMoveTimerMax;
+
 
             SnakeMovePosition previousSnakeMovePosition = null;
             if(snakeMovePositionList.Count > 0)
@@ -183,6 +198,7 @@ public class Snake : MonoBehaviour
             {
                 snakeBodySize++;
                 CreateSnakeBodyPart();
+                SoundManager.PlaySound(SoundManager.Sound.SnakeEat);
             }
 
             if (snakeMovePositionList.Count >= snakeBodySize + 1)
@@ -199,6 +215,7 @@ public class Snake : MonoBehaviour
                 {
                     state = State.Dead;
                     GameHandler.SnakeDied();
+                    SoundManager.PlaySound(SoundManager.Sound.SnakeDie);
                 }
             }
 

@@ -15,6 +15,8 @@ public class GameOverWindow : MonoBehaviour
             Loader.Load(Loader.Scene.GameScene);
         };
 
+        transform.Find("RetryButton").GetComponent<Button_UI>().AddButtonSounds();
+
         Hide();
     }
 

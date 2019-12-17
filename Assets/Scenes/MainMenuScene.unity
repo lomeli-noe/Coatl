@@ -676,6 +676,12 @@ MonoBehaviour:
   snakeHeadSprite: {fileID: 21300000, guid: 8bf2dd74688ad41dfad2f24f4cf161bf, type: 3}
   foodSprite: {fileID: 21300000, guid: d918480e55fb640c78c625e71de4d255, type: 3}
   snakeBodySprite: {fileID: 21300000, guid: 6d2dc6741634640c49e367fd27f0650f, type: 3}
+  BGMusic: {fileID: 8300000, guid: c598de53bb95d456a80e73de9db7be6d, type: 3}
+  ButtonClick: {fileID: 8300000, guid: 96d10efffab2b4307ba19d6761256849, type: 3}
+  Cumbia: {fileID: 0}
+  soundAudioClipArray:
+  - sound: 3
+    audioClip: {fileID: 8300000, guid: 74ba66cfe50434647951ee861ba6620b, type: 3}
 --- !u!4 &739468878
 Transform:
   m_ObjectHideFlags: 0
@@ -821,7 +827,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1507603858}
   - component: {fileID: 1507603859}
-  - component: {fileID: 1507603860}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -853,18 +858,6 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1507603859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507603857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce37fb4dbe3c04520800707b953e5bd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1507603860
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

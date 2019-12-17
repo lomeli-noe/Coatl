@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\LoaderCallback.cs" />
     <Compile Include="Assets\Scripts\MainMenuWindow.cs" />
     <Compile Include="Assets\Scripts\ScoreWindow.cs" />
+    <Compile Include="Assets\Scripts\Shake.cs" />
     <Compile Include="Assets\Scripts\Snake.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <None Include="Assets\CodeMonkey\README.txt" />

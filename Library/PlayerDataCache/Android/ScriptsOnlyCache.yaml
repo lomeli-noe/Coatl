@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - LoaderCallback
     - MainMenuWindow
     - ScoreWindow
+    - Shake
     - Snake
     Unity.2D.Sprite.Editor.dll:
     - UnityEditor.U2D.Sprites.SpriteEditorWindow
@@ -34,6 +35,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Outline
+    - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/GameScene.unity:
@@ -51,36 +53,48 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9670}
+      Script: {instanceID: 9672}
     - Class: 114
-      Script: {instanceID: 9780}
+      Script: {instanceID: 9782}
     - Class: 114
-      Script: {instanceID: 9834}
+      Script: {instanceID: 9836}
     - Class: 114
-      Script: {instanceID: 9874}
+      Script: {instanceID: 9876}
     - Class: 114
-      Script: {instanceID: 10282}
+      Script: {instanceID: 10216}
     - Class: 114
-      Script: {instanceID: 10348}
+      Script: {instanceID: 10284}
     - Class: 114
-      Script: {instanceID: 10562}
+      Script: {instanceID: 10304}
     - Class: 114
-      Script: {instanceID: 11058}
+      Script: {instanceID: 10352}
     - Class: 114
-      Script: {instanceID: 11144}
+      Script: {instanceID: 10566}
     - Class: 114
-      Script: {instanceID: 11146}
+      Script: {instanceID: 11062}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11148}
     - Class: 114
-      Script: {instanceID: 11468}
+      Script: {instanceID: 11150}
     - Class: 114
-      Script: {instanceID: 11526}
+      Script: {instanceID: 11464}
+    - Class: 114
+      Script: {instanceID: 11472}
+    - Class: 114
+      Script: {instanceID: 11530}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -115,17 +129,17 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9670}
+      Script: {instanceID: 9672}
     - Class: 114
-      Script: {instanceID: 9834}
+      Script: {instanceID: 9836}
     - Class: 114
-      Script: {instanceID: 10282}
+      Script: {instanceID: 10284}
     - Class: 114
-      Script: {instanceID: 10396}
+      Script: {instanceID: 10400}
     - Class: 114
-      Script: {instanceID: 11144}
+      Script: {instanceID: 11148}
     - Class: 114
-      Script: {instanceID: 11526}
+      Script: {instanceID: 11530}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -155,30 +169,34 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9670}
+      Script: {instanceID: 9672}
     - Class: 114
-      Script: {instanceID: 9780}
+      Script: {instanceID: 9782}
     - Class: 114
-      Script: {instanceID: 9834}
+      Script: {instanceID: 9836}
     - Class: 114
-      Script: {instanceID: 9874}
+      Script: {instanceID: 9876}
     - Class: 114
-      Script: {instanceID: 10282}
+      Script: {instanceID: 10216}
     - Class: 114
-      Script: {instanceID: 11058}
+      Script: {instanceID: 10284}
     - Class: 114
-      Script: {instanceID: 11144}
+      Script: {instanceID: 11062}
     - Class: 114
-      Script: {instanceID: 11254}
+      Script: {instanceID: 11148}
     - Class: 114
-      Script: {instanceID: 11468}
+      Script: {instanceID: 11258}
     - Class: 114
-      Script: {instanceID: 11526}
+      Script: {instanceID: 11472}
     - Class: 114
-      Script: {instanceID: 11540}
+      Script: {instanceID: 11530}
+    - Class: 114
+      Script: {instanceID: 11544}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -228,7 +246,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 203003316d21bd9b15671390bbe0daeb
+      Hash: 836c2bc01729e93778704c2ffae17bed
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameAssets
@@ -376,6 +394,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 9615f7da878e440b1b492fe058d47a67
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Shake
   - hash:
       serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0

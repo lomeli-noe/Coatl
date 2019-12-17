@@ -32,6 +32,8 @@ public class Snake : MonoBehaviour
 
     bool hasPlayed = false;
 
+    private Shake shake;
+
     GameObject soundGameObject;
     AudioSource audioSource;
 
@@ -66,6 +68,9 @@ public class Snake : MonoBehaviour
         soundGameObject = new GameObject("Sound");
         audioSource = soundGameObject.AddComponent<AudioSource>();
         audioSource.PlayOneShot(GameAssets.instance.Cumbia);
+        audioSource.loop = true;
+
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }
 
     private void Update()
@@ -80,14 +85,17 @@ public class Snake : MonoBehaviour
                 break;
         }
 
-        if (transform.position.x > 33.6 || transform.position.x < -33.6 ||
-                    transform.position.y >= 15 || transform.position.y <= -15)
+        if (transform.position.x > 36.4|| transform.position.x < -36.2 ||
+                    transform.position.y >= 14.7 || transform.position.y <= -15.4)
         {
             state = State.Dead;
             GameHandler.SnakeDied();
+        
             if (hasPlayed == false)
             {
                 hasPlayed = true;
+                audioSource.Stop();
+                shake.CamShake();
                 SoundManager.PlaySound(SoundManager.Sound.SnakeDie);
             }
         }
@@ -124,7 +132,7 @@ public class Snake : MonoBehaviour
                             {
                                 gridMoveDirection = Direction.Right;
 
-                                transform.localScale = new Vector3(0.009f, 0.009f, 0f);
+                                transform.localScale = new Vector3(0.008f, 0.008f, 0f);
                             }
                         }
                         else
@@ -133,7 +141,7 @@ public class Snake : MonoBehaviour
                             {
                                 gridMoveDirection = Direction.Left;
 
-                                transform.localScale = new Vector3(0.009f, -0.009f, 0f);
+                                transform.localScale = new Vector3(0.008f, -0.008f, 0f);
                             }
                         }
                     }
@@ -215,6 +223,8 @@ public class Snake : MonoBehaviour
                 {
                     state = State.Dead;
                     GameHandler.SnakeDied();
+                    shake.CamShake();
+                    audioSource.Stop();
                     SoundManager.PlaySound(SoundManager.Sound.SnakeDie);
                 }
             }

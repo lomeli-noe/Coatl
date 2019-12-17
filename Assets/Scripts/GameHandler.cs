@@ -10,6 +10,7 @@ public class GameHandler : MonoBehaviour
     [SerializeField] private Snake snake;
     private LevelGrid levelGrid;
 
+
     private void Awake()
     {
         instance = this;

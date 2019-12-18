@@ -15,6 +15,7 @@ public class GameHandler : MonoBehaviour
     {
         instance = this;
         Score.InitializeStatic();
+        Speed.InitializeStatic();
     }
 
     private void Start()

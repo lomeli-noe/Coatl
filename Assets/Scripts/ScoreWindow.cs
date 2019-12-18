@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class ScoreWindow : MonoBehaviour
 {
     private Text scoreText;
+    private Text speedText;
 
     private void Awake()
     {
         scoreText = transform.Find("ScoreText").GetComponent<Text>();
+        speedText = transform.Find("SpeedText").GetComponent<Text>();
 
         Score.OnHighScoreChanged += Score_OnHighScoreChanged;
 
@@ -24,6 +26,7 @@ public class ScoreWindow : MonoBehaviour
     private void Update()
     {
         scoreText.text = "Score: " + Score.GetScore().ToString();
+        speedText.text = "Speed: " + Speed.GetSpeed().ToString();
     }
 
     private void UpdateHighScore()

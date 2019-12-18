@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scripts\Shake.cs" />
     <Compile Include="Assets\Scripts\Snake.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
+    <Compile Include="Assets\Scripts\Speed.cs" />
     <None Include="Assets\CodeMonkey\README.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/sinistro/Documents/Unity Projects/Coatl/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

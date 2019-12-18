@@ -102,6 +102,7 @@ public class Snake : MonoBehaviour
         if(curScore >= 500 && curScore % 500 == 0 && !speedChanged)
         {
             gridMoveTimerMax -= .009f;
+            Speed.AddSpeed();
             speedChanged = true;
         }
 

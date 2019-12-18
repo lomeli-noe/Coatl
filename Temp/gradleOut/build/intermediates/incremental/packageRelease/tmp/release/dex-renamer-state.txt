@@ -1,4 +1,4 @@
-#Tue Dec 17 22:02:20 PST 2019
+#Tue Dec 17 22:46:25 PST 2019
 base.0=/Users/sinistro/Documents/Unity Projects/Coatl/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
 path.0=classes.dex
 renamed.0=classes.dex

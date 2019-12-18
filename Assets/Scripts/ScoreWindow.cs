@@ -10,10 +10,25 @@ public class ScoreWindow : MonoBehaviour
     private void Awake()
     {
         scoreText = transform.Find("ScoreText").GetComponent<Text>();
+
+        Score.OnHighScoreChanged += Score_OnHighScoreChanged;
+
+        UpdateHighScore();
+    }
+
+    private void Score_OnHighScoreChanged(object sender, System.EventArgs e)
+    {
+        UpdateHighScore();
     }
 
     private void Update()
     {
-        scoreText.text = GameHandler.GetScore().ToString();
+        scoreText.text = "Score: " + Score.GetScore().ToString();
+    }
+
+    private void UpdateHighScore()
+    {
+        int highscore = Score.GetHighScore();
+        transform.Find("HighScoreText").GetComponent<Text>().text = "High Score: " + highscore.ToString();
     }
 }

@@ -82,6 +82,7 @@
     <Compile Include="Assets\CodeMonkey\Utils\World_Bar.cs" />
     <Compile Include="Assets\CodeMonkey\Utils\World_Mesh.cs" />
     <Compile Include="Assets\CodeMonkey\Utils\World_Sprite.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\GameAssets.cs" />
     <Compile Include="Assets\Scripts\GameHandler.cs" />
     <Compile Include="Assets\Scripts\GameOverWindow.cs" />
@@ -89,10 +90,11 @@
     <Compile Include="Assets\Scripts\Loader.cs" />
     <Compile Include="Assets\Scripts\LoaderCallback.cs" />
     <Compile Include="Assets\Scripts\MainMenuWindow.cs" />
+    <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\ScoreWindow.cs" />
     <Compile Include="Assets\Scripts\Shake.cs" />
     <Compile Include="Assets\Scripts\Snake.cs" />
-    <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Sound.cs" />
     <None Include="Assets\CodeMonkey\README.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/sinistro/Documents/Unity Projects/Coatl/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

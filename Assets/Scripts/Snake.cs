@@ -30,13 +30,11 @@ public class Snake : MonoBehaviour
     private List<SnakeMovePosition> snakeMovePositionList;
     private List<SnakeBodyPart> snakeBodyPartList;
 
-    bool hasPlayed = false;
+    int curScore;
+    bool speedChanged;
+    bool hasPlayed;
 
     private Shake shake;
-
-    GameObject soundGameObject;
-    AudioSource audioSource;
-
 
     public void Setup(LevelGrid levelGrid)
     {
@@ -65,11 +63,6 @@ public class Snake : MonoBehaviour
     {
         dragDistance = Screen.height * 15 / 100; //dragDistance is 15% height of the screen
 
-        soundGameObject = new GameObject("Sound");
-        audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.PlayOneShot(GameAssets.instance.Cumbia);
-        audioSource.loop = true;
-
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }
 
@@ -85,8 +78,8 @@ public class Snake : MonoBehaviour
                 break;
         }
 
-        if (transform.position.x > 36.4|| transform.position.x < -36.2 ||
-                    transform.position.y >= 14.7 || transform.position.y <= -15.4)
+        if (transform.position.x > 32.2 || transform.position.x < -32.2 ||
+                    transform.position.y > 15.8 || transform.position.y < -16)
         {
             state = State.Dead;
             GameHandler.SnakeDied();
@@ -94,10 +87,22 @@ public class Snake : MonoBehaviour
             if (hasPlayed == false)
             {
                 hasPlayed = true;
-                audioSource.Stop();
                 shake.CamShake();
-                SoundManager.PlaySound(SoundManager.Sound.SnakeDie);
+                FindObjectOfType<AudioManager>().Play("SnakeDeath");
+                FindObjectOfType<AudioManager>().StopPlaying("cumbia");
             }
+        }
+
+        curScore = Score.GetScore();
+        if(curScore % 500 != 0)
+        {
+            speedChanged = false;
+        }
+
+        if(curScore >= 500 && curScore % 500 == 0 && !speedChanged)
+        {
+            gridMoveTimerMax -= .009f;
+            speedChanged = true;
         }
 
     }
@@ -132,7 +137,7 @@ public class Snake : MonoBehaviour
                             {
                                 gridMoveDirection = Direction.Right;
 
-                                transform.localScale = new Vector3(0.008f, 0.008f, 0f);
+                                transform.localScale = new Vector3(0.006f, 0.006f, 0f);
                             }
                         }
                         else
@@ -141,7 +146,7 @@ public class Snake : MonoBehaviour
                             {
                                 gridMoveDirection = Direction.Left;
 
-                                transform.localScale = new Vector3(0.008f, -0.008f, 0f);
+                                transform.localScale = new Vector3(0.006f, -0.006f, 0f);
                             }
                         }
                     }
@@ -162,12 +167,12 @@ public class Snake : MonoBehaviour
                             }
                         }
                     }
-                    SoundManager.PlaySound(SoundManager.Sound.SnakeMove);
                 }
                 else
                 {   //It's a tap as the drag distance is less than 20% of the screen height
                     Debug.Log("Tap");
                 }
+                FindObjectOfType<AudioManager>().Play("snakeMove");
             }
         }
     }
@@ -206,7 +211,7 @@ public class Snake : MonoBehaviour
             {
                 snakeBodySize++;
                 CreateSnakeBodyPart();
-                SoundManager.PlaySound(SoundManager.Sound.SnakeEat);
+                FindObjectOfType<AudioManager>().Play("food");
             }
 
             if (snakeMovePositionList.Count >= snakeBodySize + 1)
@@ -223,9 +228,8 @@ public class Snake : MonoBehaviour
                 {
                     state = State.Dead;
                     GameHandler.SnakeDied();
+                    FindObjectOfType<AudioManager>().Play("SnakeDeath");
                     shake.CamShake();
-                    audioSource.Stop();
-                    SoundManager.PlaySound(SoundManager.Sound.SnakeDie);
                 }
             }
 
@@ -282,6 +286,7 @@ public class Snake : MonoBehaviour
             snakeBodyGameObject.GetComponent<SpriteRenderer>().sortingOrder = -bodyIndex;
             transform = snakeBodyGameObject.transform;
             transform.localScale = new Vector3(0.03f, 0.03f, 0f);
+            transform.position = new Vector3(transform.position.x - .5f, transform.position.y);
         }
 
         public void SetSnakeMovePosition(SnakeMovePosition snakeMovePosition)

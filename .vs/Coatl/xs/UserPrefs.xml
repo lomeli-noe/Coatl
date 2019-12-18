@@ -1,16 +1,19 @@
 ﻿<Properties StartupConfiguration="{ED20E1CC-C371-F15C-6450-B9C56B2C5742}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameHandler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Score.cs">
     <Files>
-      <File FileName="Assets/Scripts/SoundManager.cs" Line="22" Column="33" IsPinned="True" />
-      <File FileName="Assets/Scripts/GameHandler.cs" Line="14" Column="1" />
-      <File FileName="Assets/Scripts/GameAssets.cs" Line="17" Column="30" />
-      <File FileName="Assets/Scripts/LevelGrid.cs" Line="42" Column="9" />
+      <File FileName="Assets/Scripts/GameHandler.cs" Line="16" Column="25" />
+      <File FileName="Assets/Scripts/GameAssets.cs" Line="16" Column="1" />
+      <File FileName="Assets/Scripts/LevelGrid.cs" Line="36" Column="64" />
       <File FileName="Assets/Scripts/Loader.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/LoaderCallback.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameOverWindow.cs" Line="18" Column="83" />
-      <File FileName="Assets/Scripts/MainMenuWindow.cs" Line="17" Column="17" />
-      <File FileName="Assets/Scripts/Shake.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Snake.cs" Line="138" Column="82" NotebookId="1" />
+      <File FileName="Assets/Scripts/GameOverWindow.cs" Line="16" Column="50" />
+      <File FileName="Assets/Scripts/MainMenuWindow.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Shake.cs" Line="14" Column="39" />
+      <File FileName="Assets/Scripts/Snake.cs" Line="82" Column="48" />
+      <File FileName="Assets/Scripts/ScoreWindow.cs" Line="17" Column="60" />
+      <File FileName="Assets/Scripts/AudioManager.cs" Line="48" Column="40" />
+      <File FileName="Assets/Scripts/Sound.cs" Line="17" Column="22" />
+      <File FileName="Assets/Scripts/Score.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

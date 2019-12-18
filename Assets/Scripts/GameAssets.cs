@@ -14,16 +14,4 @@ public class GameAssets : MonoBehaviour
     public Sprite foodSprite;
     public Sprite snakeBodySprite;
 
-    public AudioClip BGMusic;
-    public AudioClip ButtonClick;
-    public AudioClip Cumbia;
-
-    public SoundAudioClip[] soundAudioClipArray;
-
-    [Serializable]
-    public class SoundAudioClip
-    {
-        public SoundManager.Sound sound;
-        public AudioClip audioClip;
-    }
 }

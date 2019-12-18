@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AudioManager
     - CodeMonkey.Assets
     - CodeMonkey.Utils.Button_UI
     - GameAssets
@@ -92,9 +93,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11472}
-    - Class: 114
       Script: {instanceID: 11530}
+    - Class: 114
+      Script: {instanceID: 26206}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -197,6 +198,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11530}
     - Class: 114
       Script: {instanceID: 11544}
+    - Class: 114
+      Script: {instanceID: 26206}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -246,7 +249,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 836c2bc01729e93778704c2ffae17bed
+      Hash: 203003316d21bd9b15671390bbe0daeb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameAssets
@@ -718,6 +721,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 66056c2209ff8e6b238f8b056c7eb331
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenuScene.unity

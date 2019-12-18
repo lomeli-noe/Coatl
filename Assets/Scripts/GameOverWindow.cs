@@ -13,9 +13,8 @@ public class GameOverWindow : MonoBehaviour
         transform.Find("RetryButton").GetComponent<Button_UI>().ClickFunc = () =>
         {
             Loader.Load(Loader.Scene.GameScene);
+            FindObjectOfType<AudioManager>().Play("cumbia");
         };
-
-        transform.Find("RetryButton").GetComponent<Button_UI>().AddButtonSounds();
 
         Hide();
     }

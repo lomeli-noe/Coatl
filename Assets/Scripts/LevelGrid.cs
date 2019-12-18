@@ -27,13 +27,13 @@ public class LevelGrid
     {
         do
         {
-            foodGripPosition = new Vector2Int(Random.Range(-35, 35), Random.Range(-13, 13));
+            foodGripPosition = new Vector2Int(Random.Range(-31, 31), Random.Range(-14, 14));
         } while (snake.GetFullSnakeGridPositionList().IndexOf(foodGripPosition) != -1);
 
         foodGameObject = new GameObject("Food", typeof(SpriteRenderer));
         foodGameObject.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.foodSprite;
         foodGameObject.transform.position = new Vector3(foodGripPosition.x, foodGripPosition.y);
-        foodGameObject.transform.localScale = new Vector3(0.01f, 0.01f, 0f);
+        foodGameObject.transform.localScale = new Vector3(0.007f, 0.007f, 0f);
     }
 
     public bool TrySnakeEatFood(Vector2Int snakeGridPosition)
@@ -43,7 +43,7 @@ public class LevelGrid
         {
             Object.Destroy(foodGameObject);
             SpawnFood();
-            GameHandler.AddScore();
+            Score.AddScore();
             return true;
         }
         else

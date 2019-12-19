@@ -16,6 +16,12 @@ public class GameOverWindow : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("cumbia");
         };
 
+        transform.Find("MainMenuButton").GetComponent<Button_UI>().ClickFunc = () =>
+        {
+            Loader.Load(Loader.Scene.MainMenuScene);
+            FindObjectOfType<AudioManager>().Play("cumbia");
+        };
+
         Hide();
     }
 

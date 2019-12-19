@@ -229,6 +229,7 @@ public class Snake : MonoBehaviour
                 {
                     state = State.Dead;
                     GameHandler.SnakeDied();
+                    FindObjectOfType<AudioManager>().StopPlaying("cumbia");
                     FindObjectOfType<AudioManager>().Play("SnakeDeath");
                     shake.CamShake();
                 }

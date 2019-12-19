@@ -465,7 +465,7 @@ RectTransform:
   m_GameObject: {fileID: 287522959}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1228981542}
   m_RootOrder: 0
@@ -1918,7 +1918,7 @@ PrefabInstance:
     - target: {fileID: 3060009254750438674, guid: 1366270dfc86a4dd4be1f50b482ce792,
         type: 3}
       propertyPath: sounds.Array.data[3].volume
-      value: 1
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 3060009254750438674, guid: 1366270dfc86a4dd4be1f50b482ce792,
         type: 3}
@@ -1954,6 +1954,21 @@ PrefabInstance:
         type: 3}
       propertyPath: sounds.Array.data[4].pitch
       value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060009254750438674, guid: 1366270dfc86a4dd4be1f50b482ce792,
+        type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060009254750438674, guid: 1366270dfc86a4dd4be1f50b482ce792,
+        type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060009254750438674, guid: 1366270dfc86a4dd4be1f50b482ce792,
+        type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1366270dfc86a4dd4be1f50b482ce792, type: 3}

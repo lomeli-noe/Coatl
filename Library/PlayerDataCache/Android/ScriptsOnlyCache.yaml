@@ -67,13 +67,13 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9672}
+      Script: {instanceID: 9670}
     - Class: 114
-      Script: {instanceID: 9782}
+      Script: {instanceID: 9780}
     - Class: 114
-      Script: {instanceID: 9836}
+      Script: {instanceID: 9834}
     - Class: 114
-      Script: {instanceID: 9876}
+      Script: {instanceID: 9874}
     - Class: 114
       Script: {instanceID: 10216}
     - Class: 114
@@ -85,17 +85,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10566}
     - Class: 114
-      Script: {instanceID: 11062}
+      Script: {instanceID: 10886}
     - Class: 114
-      Script: {instanceID: 11148}
+      Script: {instanceID: 11066}
     - Class: 114
-      Script: {instanceID: 11150}
+      Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11464}
+      Script: {instanceID: 11154}
     - Class: 114
-      Script: {instanceID: 11530}
+      Script: {instanceID: 11468}
     - Class: 114
-      Script: {instanceID: 26206}
+      Script: {instanceID: 11534}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -130,17 +130,17 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9672}
+      Script: {instanceID: 9670}
     - Class: 114
-      Script: {instanceID: 9836}
+      Script: {instanceID: 9834}
     - Class: 114
       Script: {instanceID: 10284}
     - Class: 114
       Script: {instanceID: 10400}
     - Class: 114
-      Script: {instanceID: 11148}
+      Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11530}
+      Script: {instanceID: 11534}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -173,31 +173,31 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9672}
+      Script: {instanceID: 9670}
     - Class: 114
-      Script: {instanceID: 9782}
+      Script: {instanceID: 9780}
     - Class: 114
-      Script: {instanceID: 9836}
+      Script: {instanceID: 9834}
     - Class: 114
-      Script: {instanceID: 9876}
+      Script: {instanceID: 9874}
     - Class: 114
       Script: {instanceID: 10216}
     - Class: 114
       Script: {instanceID: 10284}
     - Class: 114
-      Script: {instanceID: 11062}
+      Script: {instanceID: 10886}
     - Class: 114
-      Script: {instanceID: 11148}
+      Script: {instanceID: 11066}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11262}
     - Class: 114
-      Script: {instanceID: 11530}
+      Script: {instanceID: 11476}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 11534}
     - Class: 114
-      Script: {instanceID: 26206}
+      Script: {instanceID: 11548}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -511,6 +511,12 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
+      Hash: 66056c2209ff8e6b238f8b056c7eb331
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioManager
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -719,12 +725,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 66056c2209ff8e6b238f8b056c7eb331
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AudioManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenuScene.unity
